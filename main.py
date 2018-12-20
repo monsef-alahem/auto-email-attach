@@ -64,7 +64,7 @@ sheet = wb.sheet_by_index(0)
 print(sheet.nrows)
 
 # loop over the excel file's rows
-for rownum in range(sheet.nrows -2):
+for rownum in range(sheet.nrows -1):
 
     #retriev data from the first collum, in this case the name
     name = sheet.cell(rownum+1,11).value
