@@ -1,5 +1,5 @@
 '''
-Authors: Monsef ALAHEM
+Authors: Zineb ALAHEM & Monsef ALAHEM
 sumerize: the progam send a message with attachements to all emails found in excel
 '''
 
@@ -25,7 +25,7 @@ import time
 
 
 # email sending server
-host_server = 'smtp.gmail.com' #exmeple 'smtp.exmail.qq.com'
+host_server = 'smtp.gmail.com' #another exmeple depending on your email provider 'smtp.exmail.qq.com'
 sender_mail = 'your_mail@gmail.com'
 sender_passcode = 'your_pass'
 
@@ -55,10 +55,7 @@ def send_mail(receiver='', mail_title='', mail_content='',files=None):
 
     smtp.sendmail(sender_mail, receiver, msg.as_string())
     smtp.quit()
-
-#loading a file an sending mail for e-mail in file
-#f = open("contact.txt","r")
-
+    
 #loading excel file
 wb = open_workbook ("your_contacts.xlsx")
 sheet = wb.sheet_by_index(0)
